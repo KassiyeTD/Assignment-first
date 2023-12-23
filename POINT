@@ -1,0 +1,19 @@
+package models;
+
+public class Point {
+    private double a;
+    private double b;
+    public Point(double a, double b) {
+        this.a = a;
+        this.b = b;
+    }
+    public double distance(Point dest) {
+        double da = this.a - dest.a;
+        double db = this.b - dest.b;
+
+        return Math.sqrt(da * da + db * db);
+    }
+    public String toString() {
+        return "(" + a + ", " + b + ")";
+    }
+}
